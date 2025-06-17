@@ -41,9 +41,6 @@ The image below shows the top level schematic page. Click on it to download the 
 
 [Text file parts list](BITSY_V1B_mouser.txt) for pasting into the [Mouser BOM tool](https://www.mouser.com/Bom/CopyPaste) (login required).
 
-Check out the [interactive BOM](https://htmlpreview.github.io/?https://github.com/codesmythe/BITSY_MK_I/raw/refs/heads/main/BITSY_V1B_ibom.html)
-for the board.
-
 To obtain a BITSY Mark I PCB, download these [Gerbers](https://github.com/codesmythe/BITSY_MK_I/raw/refs/heads/main/BITSY_V1B.zip) for use at your preferred PCB manufacturer. I use JLCPCB.
 
 #### SRAM choice
