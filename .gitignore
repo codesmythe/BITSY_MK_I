@@ -1,0 +1,6 @@
+*.kicad_prl
+fp-info-cache
+BITSY-backups
+*.chp
+*.fus
+*.pin

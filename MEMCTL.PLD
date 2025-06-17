@@ -1,0 +1,27 @@
+GAL22V10
+22V10
+
+/MFPIRQ /INT4     /INT2   /TIMEREXP  /AS   FC0  FC1  FC2       A3    A2    A1    GND
+/PIOREQ /CPUSPACE /MFPIEO IEO       /IORQ /BERR /M1  /INT6IACK /VPA  /IPL1 /IPL2 VCC
+
+CPUSPACE  = FC2 * FC1 * FC0
+INT6IACK  = AS * FC2 * FC1 * FC0
+
+; Assert /VPA when /INT4 is acknowledged to cause IPL4 to autovector.
+
+VPA = AS * FC2 * FC1 * FC0 * A3 * /A2 * /A1            ; IPL = 4
+
+IPL2 = MFPIRQ + INT4
+IPL1 = MFPIRQ
+
+BERR = TIMEREXP * /VPA
+
+M1 = FC2 * FC1 * FC0 ; For now, M1 is just CPUSPACE
+
+IORQ = PIOREQ + AS * FC2 * FC1 * FC0
+
+IEO = MFPIEO
+
+DESCRIPTION
+
+Interrupt control logic for BITSY Mark I SBC.

@@ -1,0 +1,34 @@
+GAL22V10
+22V10 
+
+nUDS nLDS   nPIORQ  A15   A14     A13    A12    A11    A10   A9      A8    GND
+A1   WREVEN WRODD   RnW   PSGBC1  PSGCS  RDODD  RDEVEN NC00  PSGBDIR MFPCS VCC
+
+/MFPCS  =    /nPIORQ   *  A15  *  A14 *  A13 *  A12 * A11 * /A10 *  A9 * /A8 ; decodes 256 byte block at 0xFF_FAxx
+
+PSGBDIR =    /nUDS * /RnW
+
+PSGBC1  =    /nPIORQ   *  A15  * /A14 * /A13 * /A12 * A11 * /A10 * /A9 * /A8 * /A1 * /nUDS
+
+/PSGCS  =    /nPIORQ   *  A15  * /A14 * /A13 * /A12 * A11 * /A10 * /A9 * /A8 ; decodes 0xFF_88xx
+
+/RDODD   =   /nLDS * RnW
+/RDEVEN  =   /nUDS * RnW
+
+/WRODD  =  /nLDS * /RnW
+/WREVEN =  /nUDS * /RnW
+
+DESCRIPTION
+***********
+Memory Map
+
+00_0000 to 0F_FFFF    1MB RAM (or 4 MB RAM)
+E0_0000 to EF_FFFF    1MB ROM
+F0_0000 to F0_003F    IDE (mirrored every 64 bytes in the  4K byte range from F0_0000 to F0_0FFF.)
+FF_0000 to FF_FFFF    64K RC2014 IO (IOREQ). Also includes PSG and MFP.
+
+IO MAP
+
+FF_FA00 to FF_FA2F    MFP (mirrored every 48 bytes in the 256 byte range from FF_FA00 to FA_FAFF.)
+FF_8800 to FF_8803    PSG (mirrored every  4 bytes in the 256 byte range from FF_8800 to FF_88FF.)
+

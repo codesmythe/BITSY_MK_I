@@ -1,0 +1,40 @@
+GAL22V10
+22V10
+
+BUSCLK    /AS       /RAMROMCS NC01     /MFPCS  /CSIDE /IORQ   /MFPDTACK  A11      A10      A5        GND
+RnW       NC00      WS2       WS1      WS0     /DIOW  /DIOR   /DTACK    /IDECS1  /IDECS3  /TIMEREXP  VCC
+
+; IO wait state machine, clocked on BUSCLK (7.3 MHz)
+
+WS0.R     = /WS0
+
+WS1.R     = /WS1 *  WS0
+          +  WS1 * /WS0
+
+WS2.R     =    WS0 *  WS1 * /WS2  ; 3
+            + /WS0        *  WS2  ; 1x0 => 100 (4) or 110 (6)
+            +        /WS1 *  WS2  ; 10x => 100 (4) or 101 (5)
+
+TIMEREXP = AS * WS2 * WS1 * WS0
+
+AR = /AS ; Reset wait state machine when there is no address on the bus.
+
+; Read and Write for IO
+
+DIOW     =    /RnW * /WS1 *  WS0         ; always assert when WS = 01
+            + /RnW *  WS1 * /WS0 * IORQ  ; also assert   when WS = 10 if an IO request
+
+DIOR     =     RnW * /WS1 *  WS0         ; always assert when WS = 01
+            +  RnW *  WS1 * /WS0 * IORQ  ; also  assert  when WS = 10 if an IO request
+
+DTACK    =  RAMROMCS
+         +  MFPDTACK
+         +  IORQ  * /MFPCS * WS1 * /WS0 ; WS = 10
+         +  CSIDE          * WS1 * /WS0 ; WS = 10
+
+IDECS1 =  CSIDE  * /A11 * /A10 * /A5 ; decodes 1K at 0xF0_0000 to 0xF0_03FF
+IDECS3 =  CSIDE  * /A11 * /A10 *  A5
+
+DESCRIPTION
+
+Wait state, DTACK generation and IDE interface.

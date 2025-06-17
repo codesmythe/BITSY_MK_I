@@ -1,0 +1,38 @@
+GAL22V10
+22V10 
+
+/AS       /RESET   A23  A22  A21    A20    A19      A18    A17    A16     A15        GND
+/CPUSPACE A12      A13  A14  /ROMCS /RAMCS nBOOTSEL /MREQ  /CSF00 /PIOREQ /RAMROMCS  VCC
+
+RAMCS  =   AS * /CPUSPACE * nBOOTSEL * /A23 * /A22 * /A21 * /A20 ; lowest one megabyte
+
+ROMCS  =   AS * /CPUSPACE * /nBOOTSEL
+         + AS * /CPUSPACE * nBOOTSEL  *  A23 * A22 * A21 * /A20  ; one megabyte starting at 0xE0_0000
+
+CSF00  =   AS * /CPUSPACE *  A23 *  A22 *  A21 *  A20 *  /A19 * /A18 * /A17 * /A16 * /A15 * /A14 * /A13 * /A12
+
+PIOREQ =   AS * /CPUSPACE *  A23 *  A22 *  A21 *  A20 *  A19  *  A18 *  A17 *  A16
+
+MREQ = GND
+
+; BOOTSEL logic, with one flop. Flop is asynchronously set on assert of RESET. Then reset
+; when A23 is asserted, meaning we are now executing from ROM.
+
+AR = RESET
+
+nBOOTSEL.R = nBOOTSEL + A23 ; low (active) during first few cycles after RESET, then high (inactive)
+
+RAMROMCS =    AS * /CPUSPACE * nBOOTSEL * /A23 * /A22 * /A21 * /A20 ; lowest one megabyte
+            + AS * /CPUSPACE * /nBOOTSEL
+            + AS * /CPUSPACE * nBOOTSEL  *  A23 * A22 * A21 * /A20  ; one megabyte starting at 0xE0_0000
+
+DESCRIPTION
+***********
+
+This implements the address decoder for the upper twelve bits of the 24-bit address bus.
+
+/RAMCS    is asserted for non-cpu-space decode of 0x00_0000 to 0x0F_FFFF (1MB).
+/ROMCS    is asserted for non-cpu-space decode of 0xE0_0000 to 0xEF_FFFF.
+/RAMROMCS is the logical OR of the above two signals.
+/CSF00    is asserted for non-cpu-space decode of 0xF0_0xxx (for IDE).
+/PIORQ    is asserted for non-cpu-space decode of 0xFF_xxxx. This gives 64K I/O space.
