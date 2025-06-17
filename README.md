@@ -1,5 +1,17 @@
 ![BITSY](images/BITSY%20Mark%20I%20Hardware.png)
 
+This board is designed to run the [EmuTOS](https://emutos.sourceforge.io) operating system. EmuTOS is an open-source
+variant of the Atari ST TOS operating system.
+
+BITSY Mark I is part of system containing this board, a [XOSERA_RCBUS](https://github.com/codesmythe/XOSERA_RCBUS) board for VGA output, a [KEMOJO](https://github.com/codesmythe/KEMOJO) board for PS/2 keyboard and mouse input, and an RCBus backplane board such as an [SC147](https://smallcomputercentral.com/rcbus/sc100-series/sc147-modular-backplane-rc2014/). Together, this system can run full GUI EmuTOS with 640x240 graphics in 16 colors.
+
+This SBC can also be used by itself, in EmuTOS command-line mode, using the on-board UART for serial input and output at 57600 baud.
+
+But please do note that it is early days for this system, so there are undiscovered bugs looming. In particular, you may see 
+occasional graphical artifacts in EmuTOS as the driver is debugged.
+
+![BITSY System](images/BITSY_system.png)
+
 ## Table of Contents
 * [Hardware Documentation](#hardware-documentation)
   * [Schematic](#schematic)
@@ -102,9 +114,8 @@ SRAM which will also work for either configuration.
 
 ### ROM: EmuTOS
 
-This board is designed to run the [EmuTOS](https://emutos.sourceforge.io) operating system. EmuTOS is an open-source
-variant of the Atari ST TOS operating system. The source code for my fork of EmuTOS to support various 68K single
-board computers can be found [here](https://github.com/codesmythe/emutos). The version of EmuTOS in the fork is
+As mentioned, this board is designed to run EmuTOS. The source code for my fork of EmuTOS to support various 68K single
+board computers, including this one, can be found [here](https://github.com/codesmythe/emutos). The version of EmuTOS in the fork is
 based on EmuTOS version 1.4.
 
 Two default configurations are provided by the ROM binaries in this repository. Other configurations are
