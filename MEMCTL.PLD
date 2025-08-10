@@ -9,16 +9,22 @@ INT6IACK  = AS * FC2 * FC1 * FC0
 
 ; Assert /VPA when /INT4 is acknowledged to cause IPL4 to autovector.
 
-VPA = AS * FC2 * FC1 * FC0 * A3 * /A2 * /A1            ; IPL = 4
+VPA =   AS * FC2 * FC1 * FC0 *  A3 * /A2 * /A1            ; IPL = 4
+      + AS * FC2 * FC1 * FC0 * /A3 *  A2 * /A1            ; IPL = 2
 
 IPL2 = MFPIRQ + INT4
-IPL1 = MFPIRQ
+IPL1 = MFPIRQ + INT2
 
 BERR = TIMEREXP * /VPA
 
 M1 = FC2 * FC1 * FC0 ; For now, M1 is just CPUSPACE
 
-IORQ = PIOREQ + AS * FC2 * FC1 * FC0
+; The board can be jumpered to have the RCBus interrupt
+; generate a level 2 or level 4 68K interrupt, but never
+; both at the same time.
+IORQ =   PIOREQ
+       + AS * FC2 * FC1 * FC0 *  A3 * /A2 * /A1 ; Ack for Level 4
+       + AS * FC2 * FC1 * FC0 * /A3 *  A2 * /A1 ; Ack for Level 2
 
 IEO = MFPIEO
 
