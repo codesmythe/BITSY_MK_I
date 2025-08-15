@@ -5,4 +5,5 @@
   (lib (name "Motorola")(type "KiCad")(uri "${KIPRJMOD}/Motorola.kicad_sym")(options "")(descr ""))
   (lib (name "AY-3-8913")(type "KiCad")(uri "${KIPRJMOD}/AY-3-8913.kicad_sym")(options "")(descr ""))
   (lib (name "MIC1232")(type "KiCad")(uri "${KIPRJMOD}/MIC1232.kicad_sym")(options "")(descr ""))
+  (lib (name "SRAM_SIMM")(type "KiCad")(uri "${KIPRJMOD}/SRAM_SIMM.kicad_sym")(options "")(descr ""))
 )

@@ -6,9 +6,9 @@
 	(paper "A")
 	(title_block
 		(title "BITSY Mark I - An MC68000 Single Board Computer")
-		(date "2025-06-12")
-		(rev "V1B")
-		(comment 1 "Licensed under CC-BY-SA-NC 4.0.")
+		(date "2025-08-15")
+		(rev "V1C")
+		(comment 1 "Licensed under CERN-OHL-S.")
 		(comment 2 "https://github.com/codesmythe/BITSY_MK_I")
 		(comment 3 "© 2025 Rob Gowin")
 		(comment 4 "BITSY Mark I is a single board computer based around an MC68000 CPU.")
@@ -5532,8 +5532,8 @@
 		)
 		(uuid "07fba530-15f8-4777-b904-59175c88db5a")
 	)
-	(label "~{RDEVEN}"
-		(at 74.93 88.9 0)
+	(label "~{WRODD}"
+		(at 74.93 91.44 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5702,7 +5702,7 @@
 		)
 		(uuid "306826ab-4e1b-4e68-a6ac-1dd49091d1d9")
 	)
-	(label "~{RDODD}"
+	(label "~{RAM1CS}"
 		(at 74.93 83.82 0)
 		(effects
 			(font
@@ -5742,7 +5742,7 @@
 		)
 		(uuid "44816ba2-1118-4c66-b4d8-fbdc5edc0a7c")
 	)
-	(label "~{RAMCS}"
+	(label "~{RAM0CS}"
 		(at 74.93 81.28 0)
 		(effects
 			(font
@@ -5873,7 +5873,7 @@
 		(uuid "6eae2749-9e59-4f80-aa3d-67b9dbde9f28")
 	)
 	(label "~{WREVEN}"
-		(at 74.93 91.44 0)
+		(at 74.93 88.9 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6242,7 +6242,7 @@
 		)
 		(uuid "d0c5c126-f5d2-4d7d-838f-eb4e061125cf")
 	)
-	(label "~{WRODD}"
+	(label "~{READ}"
 		(at 74.93 86.36 0)
 		(effects
 			(font
@@ -8196,28 +8196,8 @@
 				(justify left top)
 			)
 		)
-		(pin "~{RAMSEL}" input
-			(at 72.39 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "4a82094e-efc1-4e31-96e4-b0cf045eec8e")
-		)
-		(pin "~{RDODD}" input
-			(at 72.39 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "b5a7f1b8-68ce-4a21-9cac-f5b6daffe030")
-		)
 		(pin "~{WRODD}" input
-			(at 72.39 86.36 0)
+			(at 72.39 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8236,18 +8216,8 @@
 			)
 			(uuid "02b05b4e-4a0a-4124-afc3-84d831a14dff")
 		)
-		(pin "~{RDEVEN}" input
-			(at 72.39 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "617b944d-6bb1-4cd3-9641-8ae986321556")
-		)
 		(pin "~{WREVEN}" input
-			(at 72.39 91.44 0)
+			(at 72.39 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8266,7 +8236,37 @@
 			)
 			(uuid "f7d75736-4391-42bb-9950-2b2d08e43a86")
 		)
-		(pin "A[1..21]" input
+		(pin "~{RAM0SEL}" input
+			(at 72.39 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "67cc9e24-17b5-43b1-a514-afe2c4d7c73c")
+		)
+		(pin "~{RAM1SEL}" input
+			(at 72.39 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "466168c7-5b48-4784-a90c-c8dd3aa2518b")
+		)
+		(pin "~{READ}" input
+			(at 72.39 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "b2c7c949-9efe-4a23-b7b1-03c7f7720291")
+		)
+		(pin "A[1..19]" input
 			(at 46.99 80.01 180)
 			(effects
 				(font
@@ -8274,7 +8274,7 @@
 				)
 				(justify left)
 			)
-			(uuid "8636d076-446c-4eb7-800d-636242599982")
+			(uuid "1ccb759b-3e5d-44df-8373-176848784951")
 		)
 		(instances
 			(project "BITSY"
@@ -8482,16 +8482,6 @@
 			)
 			(uuid "67bd4210-3670-4fbb-b2c8-916e02bbae6e")
 		)
-		(pin "~{RAMCS}" output
-			(at 85.09 81.28 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "db440061-170d-40e0-b164-0872756f2c1b")
-		)
 		(pin "~{RESET}" input
 			(at 113.03 91.44 0)
 			(effects
@@ -8682,18 +8672,8 @@
 			)
 			(uuid "e8094310-629e-4512-a3c9-42b4ec25122c")
 		)
-		(pin "~{RDODD}" output
-			(at 85.09 83.82 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "450fd2a5-a68b-4d48-9564-3567e2582f3b")
-		)
 		(pin "~{WRODD}" output
-			(at 85.09 86.36 180)
+			(at 85.09 91.44 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8723,16 +8703,6 @@
 			(uuid "fa1311a0-dbba-429a-aed6-31fd1d54f8ba")
 		)
 		(pin "~{WREVEN}" output
-			(at 85.09 91.44 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "03ff3a27-7c65-48a0-ad7a-777b58d97aff")
-		)
-		(pin "~{RDEVEN}" output
 			(at 85.09 88.9 180)
 			(effects
 				(font
@@ -8740,7 +8710,7 @@
 				)
 				(justify left)
 			)
-			(uuid "03466223-34bf-4e75-bf10-b4b7b94bf1eb")
+			(uuid "03ff3a27-7c65-48a0-ad7a-777b58d97aff")
 		)
 		(pin "~{IDECS}" output
 			(at 113.03 138.43 0)
@@ -8891,6 +8861,36 @@
 				(justify left)
 			)
 			(uuid "9fe6d24f-3310-4502-ae96-251412d9a709")
+		)
+		(pin "~{RAM0CS}" output
+			(at 85.09 81.28 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "d82549a5-5bd1-4dda-ab12-9d84ab15acef")
+		)
+		(pin "~{RAM1CS}" output
+			(at 85.09 83.82 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "c0c72f34-83e5-4e64-b0c6-0cafe4d03120")
+		)
+		(pin "~{READ}" output
+			(at 85.09 86.36 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "cffd389d-598c-40e6-8d4d-56fc4d97a135")
 		)
 		(instances
 			(project "BITSY"

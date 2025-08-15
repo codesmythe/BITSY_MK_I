@@ -6,8 +6,8 @@
 	(paper "A")
 	(title_block
 		(title "BITSY Mark I - An MC68000 Single Board Computer")
-		(date "2025-06-12")
-		(rev "V1B")
+		(date "2025-08-15")
+		(rev "V1C")
 		(comment 1 "Licensed under CC-BY-SA-NC 4.0.")
 		(comment 2 "https://github.com/codesmythe/BITSY_MK_I")
 		(comment 3 "© 2025 Rob Gowin")
@@ -974,6 +974,10 @@
 		(uuid "f8b118c8-2a2d-4639-bd12-1a7c9e6437b2")
 	)
 	(no_connect
+		(at 158.75 111.76)
+		(uuid "06725e97-c951-4fbc-a47b-5b8a8625ba78")
+	)
+	(no_connect
 		(at 212.09 109.22)
 		(uuid "1e066b51-93f5-4961-9f16-6eacf8197b32")
 	)
@@ -996,10 +1000,6 @@
 	(no_connect
 		(at 252.73 121.92)
 		(uuid "e59a5fc4-5639-4906-83ad-7e4ed2d306e0")
-	)
-	(no_connect
-		(at 68.58 106.68)
-		(uuid "ea2a981d-e526-4281-848e-611dd5047022")
 	)
 	(no_connect
 		(at 252.73 119.38)
@@ -1697,6 +1697,16 @@
 	)
 	(wire
 		(pts
+			(xy 68.58 106.68) (xy 83.82 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3fb514aa-ebab-4b18-ac86-1ddad3b351f3")
+	)
+	(wire
+		(pts
 			(xy 256.54 109.22) (xy 242.57 109.22)
 		)
 		(stroke
@@ -2344,16 +2354,6 @@
 			(type default)
 		)
 		(uuid "a4a0876f-df3f-48f4-9c0b-ea20b624c7a8")
-	)
-	(wire
-		(pts
-			(xy 158.75 111.76) (xy 168.91 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a5798ee9-0623-4d44-ba62-085da60a5ecf")
 	)
 	(wire
 		(pts
@@ -3161,16 +3161,6 @@
 		)
 		(uuid "00f86f82-9051-4945-9af5-7eb0ea4fb782")
 	)
-	(label "~{RDEVEN}"
-		(at 161.29 111.76 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "0234cc91-fa96-4aff-b4ae-bdf608f8b618")
-	)
 	(label "R~{W}"
 		(at 242.57 129.54 0)
 		(effects
@@ -3561,7 +3551,7 @@
 		)
 		(uuid "7bd418eb-bcca-418d-96c3-18c625fd82e2")
 	)
-	(label "~{RAMCS}"
+	(label "~{RAM0CS}"
 		(at 72.39 111.76 0)
 		(effects
 			(font
@@ -3590,6 +3580,16 @@
 			(justify left bottom)
 		)
 		(uuid "81954ede-722a-431b-b70e-23132c44eb5b")
+	)
+	(label "~{RAM1CS}"
+		(at 72.39 106.68 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "838a5271-fd02-4c86-8309-560b3e8dba94")
 	)
 	(label "R~{W}"
 		(at 161.29 121.92 0)
@@ -3671,7 +3671,7 @@
 		)
 		(uuid "a655d1ab-e598-4144-83b3-31c7b4122759")
 	)
-	(label "~{RDODD}"
+	(label "~{READ}"
 		(at 161.29 114.3 0)
 		(effects
 			(font
@@ -4025,7 +4025,7 @@
 		)
 		(uuid "15d5bac8-f343-471e-9fcc-bf223a8d5045")
 	)
-	(hierarchical_label "~{RAMCS}"
+	(hierarchical_label "~{RAM0CS}"
 		(shape output)
 		(at 83.82 111.76 0)
 		(effects
@@ -4311,7 +4311,7 @@
 		)
 		(uuid "d1bc1e0e-fe02-4248-ab5f-322d04338d30")
 	)
-	(hierarchical_label "~{RDODD}"
+	(hierarchical_label "~{READ}"
 		(shape output)
 		(at 168.91 114.3 0)
 		(effects
@@ -4365,17 +4365,6 @@
 			(justify right)
 		)
 		(uuid "dd80d5ee-2870-4ccd-9f94-f168f74c217c")
-	)
-	(hierarchical_label "~{RDEVEN}"
-		(shape output)
-		(at 168.91 111.76 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "e0884c38-dbd8-43c0-9d04-7d3f28ddb9c3")
 	)
 	(hierarchical_label "~{RESET}"
 		(shape input)
@@ -4453,6 +4442,17 @@
 			(justify left)
 		)
 		(uuid "f3c06c2c-e666-4e14-91e6-aea54c8c41b4")
+	)
+	(hierarchical_label "~{RAM1CS}"
+		(shape output)
+		(at 83.82 106.68 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "fdc7d41d-8434-42c2-a4b9-61893b3ed63e")
 	)
 	(symbol
 		(lib_id "ATF22V10C:ATF22V10C")
