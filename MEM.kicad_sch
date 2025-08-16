@@ -8362,7 +8362,25 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "SIMM Connectors 72 POS SIMM VERT TIN"
+			(at 81.28 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PartNum00" "571-5822021-4"
+			(at 81.28 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PartVendor00" "Mouser"
 			(at 81.28 81.28 0)
 			(effects
 				(font
