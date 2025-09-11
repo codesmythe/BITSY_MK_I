@@ -2,7 +2,7 @@ GAL22V10
 22V10 
 
 nUDS nLDS   nPIORQ  A15   A14     A13    A12    A11    A10   A9      A8    GND
-A1   WREVEN WRODD   RnW   PSGBC1  PSGCS  RDODD  RDEVEN NC00  PSGBDIR MFPCS VCC
+A1   WREVEN WRODD   RnW   PSGBC1  PSGCS  READ   NC01   NC00  PSGBDIR MFPCS VCC
 
 /MFPCS  =    /nPIORQ   *  A15  *  A14 *  A13 *  A12 * A11 * /A10 *  A9 * /A8 ; decodes 256 byte block at 0xFF_FAxx
 
@@ -12,8 +12,9 @@ PSGBC1  =    /nPIORQ   *  A15  * /A14 * /A13 * /A12 * A11 * /A10 * /A9 * /A8 * /
 
 /PSGCS  =    /nPIORQ   *  A15  * /A14 * /A13 * /A12 * A11 * /A10 * /A9 * /A8 ; decodes 0xFF_88xx
 
-/RDODD   =   /nLDS * RnW
-/RDEVEN  =   /nUDS * RnW
+
+/READ   =   /nLDS * RnW
+          + /nUDS * RnW
 
 /WRODD  =  /nLDS * /RnW
 /WREVEN =  /nUDS * /RnW
