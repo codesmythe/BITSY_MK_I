@@ -1,8 +1,8 @@
 GAL22V10
 22V10 
 
-/AS       /RESET   A23  A22  A21    A20    A19      A18    A17    A16     A15        GND
-/CPUSPACE A12      A13  A14  /ROMCS /RAMCS nBOOTSEL /MREQ  /CSF00 /PIOREQ /RAMROMCS  VCC
+/AS       /RESET   A23  A22  A21    A20    A19      A18     A17    A16     A15        GND
+/CPUSPACE A12      A13  A14  /ROMCS /RAMCS nBOOTSEL /RAM1CS /CSF00 /PIOREQ /RAMROMCS  VCC
 
 RAMCS  =   AS * /CPUSPACE * nBOOTSEL * /A23 * /A22 * /A21 * /A20 ; lowest one megabyte
 
@@ -13,7 +13,7 @@ CSF00  =   AS * /CPUSPACE *  A23 *  A22 *  A21 *  A20 *  /A19 * /A18 * /A17 * /A
 
 PIOREQ =   AS * /CPUSPACE *  A23 *  A22 *  A21 *  A20 *  A19  *  A18 *  A17 *  A16
 
-MREQ = GND
+RAM1CS = GND
 
 ; BOOTSEL logic, with one flop. Flop is asynchronously set on assert of RESET. Then reset
 ; when A23 is asserted, meaning we are now executing from ROM.
