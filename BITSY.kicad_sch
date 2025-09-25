@@ -6012,16 +6012,6 @@
 		)
 		(uuid "9166e3e7-a029-4bb6-9e43-e0ff2fe4ea56")
 	)
-	(label "D[0..7]"
-		(at 152.4 118.11 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "935fba4b-aeb8-4984-88b1-19bf766d6d1b")
-	)
 	(label "BUSCLK"
 		(at 155.575 59.69 0)
 		(effects
@@ -6191,16 +6181,6 @@
 			(justify left bottom)
 		)
 		(uuid "c795ce8b-2d32-4993-83b3-c73464e35d3e")
-	)
-	(label "A[1..5]"
-		(at 152.4 123.19 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c95ec288-78da-4abc-bc07-a8abb534902c")
 	)
 	(label "~{MFPIACK}"
 		(at 116.84 115.57 0)
@@ -8266,7 +8246,7 @@
 			)
 			(uuid "b2c7c949-9efe-4a23-b7b1-03c7f7720291")
 		)
-		(pin "A[1..19]" input
+		(pin "A[1..21]" input
 			(at 46.99 80.01 180)
 			(effects
 				(font
@@ -8274,7 +8254,7 @@
 				)
 				(justify left)
 			)
-			(uuid "1ccb759b-3e5d-44df-8373-176848784951")
+			(uuid "082137de-ae8c-4d60-bf7d-9f303a2bee24")
 		)
 		(instances
 			(project "BITSY"
