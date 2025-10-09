@@ -6038,7 +6038,7 @@
 				(hide yes)
 			)
 		)
-		(property "PartNum01" "737-ICS-320-T"
+		(property "PartNum01" "737-ICM-320-1-GT-HT"
 			(at 85.09 36.83 0)
 			(effects
 				(font
@@ -6555,7 +6555,7 @@
 				(hide yes)
 			)
 		)
-		(property "PartNum01" "737-ICS-320-T"
+		(property "PartNum01" "737-ICM-320-1-GT-HT"
 			(at 85.09 96.52 0)
 			(effects
 				(font

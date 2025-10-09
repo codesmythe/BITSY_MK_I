@@ -2880,7 +2880,7 @@
 				(hide yes)
 			)
 		)
-		(property "PartNum00" "696-SSL-LX5093GT"
+		(property "PartNum00" "859-LTL-307GLC"
 			(at 100.33 91.44 0)
 			(effects
 				(font
@@ -3227,7 +3227,7 @@
 				(hide yes)
 			)
 		)
-		(property "PartNum01" "571-1-2199298-2"
+		(property "PartNum01" "737-ICM-308-1-GT-HT"
 			(at 147.32 99.06 0)
 			(effects
 				(font

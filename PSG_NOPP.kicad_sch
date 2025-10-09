@@ -2393,7 +2393,7 @@
 		)
 		(uuid "fe020ecc-e3ae-427c-a1ca-5a54abbff410")
 	)
-	(text "SJ1-3523N"
+	(text "SJ1-3535NG"
 		(exclude_from_sim no)
 		(at 213.36 41.91 0)
 		(effects
@@ -4215,7 +4215,7 @@
 				(hide yes)
 			)
 		)
-		(property "PartNum01" "737-ICS-624-T"
+		(property "PartNum01" "737-ICM-624-1-GT-HT"
 			(at 91.44 93.98 0)
 			(effects
 				(font
@@ -4375,7 +4375,7 @@
 				(hide yes)
 			)
 		)
-		(property "PartNum00" "520-TCH200-X"
+		(property "PartNum00" "774-MXO45HS2C2M0000"
 			(at 22.86 120.65 0)
 			(effects
 				(font
@@ -4552,7 +4552,7 @@
 				(hide yes)
 			)
 		)
-		(property "PartNum00" "490-SJ1-3533NG"
+		(property "PartNum00" "490-SJ1-3535NG"
 			(at 205.74 39.37 0)
 			(effects
 				(font

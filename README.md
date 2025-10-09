@@ -51,11 +51,11 @@ The image below shows the top level schematic page. Click on it to download the 
 
 ### Bill of Materials
 
-[Text file parts list](BITSY_V1B_mouser.txt) for pasting into the [Mouser BOM tool](https://www.mouser.com/Bom/CopyPaste) (login required).
+[Text file parts list](BITSY_V1D_mouser.txt) for pasting into the [Mouser BOM tool](https://www.mouser.com/Bom/CopyPaste) (login required).
 
-To obtain a BITSY Mark I PCB, download these [Gerbers](https://github.com/codesmythe/BITSY_MK_I/raw/refs/heads/main/BITSY_V1B.zip) for use at your preferred PCB manufacturer. I use JLCPCB.
+To obtain a BITSY Mark I PCB, download these [Gerbers](https://github.com/codesmythe/BITSY_MK_I/raw/refs/heads/main/BITSY_V1D.zip) for use at your preferred PCB manufacturer. I use JLCPCB.
 
-#### SRAM choice
+#### SRAM choice (FIXME! OBSOLETE)
 
 The board can use two standard 32-pin DIP 512KBx8 SRAM chips, such as the AS6C4008-55PCN SRAM for a total of 1MB of RAM.
 The board has also been designed to accomodate special boards which adapt an SMT 2MBx8 SRAM to a 34-pin DIP footprint for a 

@@ -4515,7 +4515,7 @@
 				(hide yes)
 			)
 		)
-		(property "PartNum01" "737-ICS-324-T"
+		(property "PartNum01" "737-ICM-324-1-GT-HT"
 			(at 143.51 52.07 0)
 			(effects
 				(font
@@ -5129,7 +5129,7 @@
 				(hide yes)
 			)
 		)
-		(property "PartNum01" "737-ICS-324-T"
+		(property "PartNum01" "737-ICM-324-1-GT-HT"
 			(at 53.34 110.49 0)
 			(effects
 				(font
@@ -5428,7 +5428,7 @@
 				(hide yes)
 			)
 		)
-		(property "PartNum01" "737-ICS-324-T"
+		(property "PartNum01" "737-ICM-324-1-GT-HT"
 			(at 227.33 115.57 0)
 			(effects
 				(font
@@ -5597,7 +5597,7 @@
 				(hide yes)
 			)
 		)
-		(property "PartNum01" "737-ICS-324-T"
+		(property "PartNum01" "737-ICM-324-1-GT-HT"
 			(at 143.51 115.57 0)
 			(effects
 				(font
