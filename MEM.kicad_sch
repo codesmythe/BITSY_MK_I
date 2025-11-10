@@ -6,8 +6,8 @@
 	(paper "A")
 	(title_block
 		(title "BITSY Mark I - An MC68000 Single Board Computer")
-		(date "2025-08-15")
-		(rev "V1C")
+		(date "2025-11-09")
+		(rev "V1E")
 		(comment 1 "Licensed under CC-BY-SA-NC 4.0.")
 		(comment 2 "https://github.com/codesmythe/BITSY_MK_I")
 		(comment 3 "© 2025 Rob Gowin")
@@ -2555,10 +2555,6 @@
 		(at 63.5 95.25)
 		(uuid "d0269d30-7d24-4fd8-a0c0-6887abcd963a")
 	)
-	(no_connect
-		(at 63.5 92.71)
-		(uuid "ee23f96d-ef67-43b7-9b67-a86d071d6fd1")
-	)
 	(bus_entry
 		(at 119.38 66.04)
 		(size 2.54 2.54)
@@ -2873,6 +2869,15 @@
 			(type default)
 		)
 		(uuid "4ebe2cbc-b61c-412b-be91-e0ae26589964")
+	)
+	(bus_entry
+		(at 52.07 90.17)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4f236091-3c56-4bb2-ae41-f1b5212473b7")
 	)
 	(bus_entry
 		(at 119.38 148.59)
@@ -3604,7 +3609,7 @@
 	)
 	(bus
 		(pts
-			(xy 52.07 87.63) (xy 52.07 88.9)
+			(xy 52.07 87.63) (xy 52.07 90.17)
 		)
 		(stroke
 			(width 0)
@@ -4704,6 +4709,16 @@
 	)
 	(wire
 		(pts
+			(xy 54.61 92.71) (xy 63.5 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "708bb2fe-7a10-4405-b36c-45798ef83042")
+	)
+	(wire
+		(pts
 			(xy 121.92 156.21) (xy 129.54 156.21)
 		)
 		(stroke
@@ -5471,6 +5486,16 @@
 			(type default)
 		)
 		(uuid "b337b98f-9171-4378-b138-fdc78c7873ec")
+	)
+	(bus
+		(pts
+			(xy 52.07 90.17) (xy 52.07 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b4a2ada4-44e5-435a-b7c7-97b7740e6d21")
 	)
 	(wire
 		(pts
@@ -6752,6 +6777,16 @@
 		)
 		(uuid "872a2150-cfed-4ee3-acde-ff7a5cfdf0e8")
 	)
+	(label "A22"
+		(at 59.69 92.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8a330cf0-4c0a-4fad-9258-19454fe88131")
+	)
 	(label "~{WREVEN}"
 		(at 34.29 152.4 0)
 		(effects
@@ -7459,7 +7494,7 @@
 		)
 		(uuid "aa014ed2-6135-4eb8-a630-0b929f2becd3")
 	)
-	(hierarchical_label "A[1..21]"
+	(hierarchical_label "A[1..22]"
 		(shape input)
 		(at 25.4 24.13 180)
 		(effects

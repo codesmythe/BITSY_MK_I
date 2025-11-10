@@ -6,8 +6,8 @@
 	(paper "A")
 	(title_block
 		(title "BITSY Mark I - An MC68000 Single Board Computer")
-		(date "2025-08-15")
-		(rev "V1C")
+		(date "2025-11-09")
+		(rev "V1E")
 		(comment 1 "Licensed under CERN-OHL-S.")
 		(comment 2 "https://github.com/codesmythe/BITSY_MK_I")
 		(comment 3 "© 2025 Rob Gowin")
@@ -8246,7 +8246,7 @@
 			)
 			(uuid "b2c7c949-9efe-4a23-b7b1-03c7f7720291")
 		)
-		(pin "A[1..21]" input
+		(pin "A[1..22]" input
 			(at 46.99 80.01 180)
 			(effects
 				(font

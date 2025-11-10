@@ -6,8 +6,8 @@
 	(paper "A")
 	(title_block
 		(title "BITSY Mark I - An MC68000 Single Board Computer")
-		(date "2025-08-15")
-		(rev "V1C")
+		(date "2025-11-09")
+		(rev "V1E")
 		(comment 1 "Licensed under CC-BY-SA-NC 4.0.")
 		(comment 2 "https://github.com/codesmythe/BITSY_MK_I")
 		(comment 3 "© 2025 Rob Gowin")
