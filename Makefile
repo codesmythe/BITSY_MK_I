@@ -1,4 +1,4 @@
-all: CONTROL.jed DECODE.jed MEMCTL.jed HIDECODE.jed HIDECODE_4MB.jed
+all: CONTROL.jed DECODE.jed MEMCTL.jed HIDECODE.jed HIDECODE_16MB.jed
 
 %.jed: %.PLD
 	$(HOME)/GALasm/src/galasm $^
