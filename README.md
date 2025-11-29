@@ -76,7 +76,7 @@ If you end up using the system regularly, I'd suggest upgrading to a 16 MB "SRAM
 
 [Text file parts list](BITSY_V1E_mouser.txt) for pasting into the [Mouser BOM tool](https://www.mouser.com/Bom/CopyPaste) (login required).
 
-To obtain a BITSY Mark I PCB, download these [Gerbers](https://github.com/codesmythe/BITSY_MK_I/raw/refs/heads/main/BITSY_V1E.zip) for use at your preferred PCB manufacturer. I use JLCPCB.
+To obtain a BITSY Mark I PCB, download these [Gerbers](https://github.com/codesmythe/BITSY_MK_I/raw/refs/heads/main/BITSY_Mark_I_V1E.zip) for use at your preferred PCB manufacturer. I use JLCPCB.
 
 | Component Type     | Reference            | Qty  | Description                                                  | Part                                                         |
 | ------------------ | -------------------- | ---- | ------------------------------------------------------------ | ------------------------------------------------------------ |
