@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "72-pin-SIMM")(type "KiCad")(uri "${KIPRJMOD}/72-pin-SIMM.pretty")(options "")(descr ""))
+)

@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "SRAM_SIMM")(type "KiCad")(uri "${KIPRJMOD}/SRAM_SIMM.kicad_sym")(options "")(descr ""))
+)
