@@ -465,7 +465,7 @@
         "name": "Default",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.1778,
+        "track_width": 0.1651,
         "via_diameter": 0.8,
         "via_drill": 0.4,
         "wire_width": 6
@@ -1252,7 +1252,7 @@
       "netlist": "BITSY.net",
       "plot": "BITSY_V1B",
       "pos_files": "",
-      "specctra_dsn": "BITSY.dsn",
+      "specctra_dsn": "BITSY_MK_II.dsn",
       "step": "",
       "svg": "",
       "vrml": ""
@@ -1347,6 +1347,12 @@
           "label": "PartVendor01",
           "name": "PartVendor01",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Mouser",
+          "name": "Mouser",
+          "show": false
         }
       ],
       "filter_string": "",
@@ -1405,10 +1411,6 @@
       "MEM"
     ],
     [
-      "00000000-0000-0000-0000-000060e6b789",
-      "PSG_NOPP"
-    ],
-    [
       "00000000-0000-0000-0000-000062e35c7e",
       "PWRRESET"
     ],
@@ -1427,6 +1429,10 @@
     [
       "00000000-0000-0000-0000-0000618552ba",
       "IDE"
+    ],
+    [
+      "49a54426-4974-4d91-a1da-435ec7f01ebb",
+      "CPU020"
     ]
   ],
   "text_variables": {}
